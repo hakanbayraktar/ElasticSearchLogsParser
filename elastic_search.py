@@ -10,14 +10,11 @@ if port == '':
 es = Elasticsearch([{'host': host, 'port': port}])
 
 filename = input("Enter filename along with full path\n>\t")
-#filename = '/home/ebryx/Downloads/sample-syslog.txt' #str(input("Enter filename and extension with full path"))
 
-#file = open(filename, 'r')
 file = set(line.strip() for line in open(filename))
 
 cols = input("Enter column names separated by space\n>\t")
 cols = [str(cols).strip(' ')]
-#cols = ['month', 'day', 'time', 'host', 'protocol']
 index1 = input("Enter name for new index\n>\t")
 doc_type1 = input("Enter type of document\n>\t")
 
